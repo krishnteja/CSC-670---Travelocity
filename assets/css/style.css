@@ -296,6 +296,9 @@ p:last-child {
     font-weight: 800;
 }
 
+.disclaimer{
+	color: red; /*rfa 05-02*/
+}
 
 /*
 Section
