@@ -981,9 +981,93 @@ Home Section style
     
 }
 
-/*
+/*rfa 05-02
 Results Section style
 ==================*/
+.box{
+	border-radius: 0.18em;
+}
+
+.results{
+
+}
+
+.sortbar {
+  overflow: hidden;
+  color: #616161;
+  background-color: #fff;
+  border-top: 3px solid #f37737;
+  border-bottom: 2px solid #999;
+  padding: 0;
+}
+
+.sortbar ul li {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+.sortbar ul li > a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.sortbar ul > a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.result-list{
+	padding: .7em .7em 0 .7em;
+}
+
+.sopnsor-ads{
+	color: #fff;
+	font-size: 13px;
+	margin: 6px;
+	padding: 1px;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: normal;
+	border: 4px solid #036;
+	background-color:#036;
+}
+/* Pattern Filters */
+.pattern-filters .section-header-main {
+ font-size:2rem;
+ line-height:1;
+ color:#536d83;
+}
+.field-description,.inline-label,.label,legend {
+ font-size: 1em;
+ line-height:1.4;
+ color:#616161;
+ font-weight:400;
+ display: block;
+ margin-bottom:.35294118rem
+}
+.filter-set label{
+	margin-bottom: 0;
+}
+.filter-name{
+	padding: 0;
+}
+.filter-name, .from-label{
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.control-and-label{
+	position: relative;
+	width: 75%;
+}
+.lowest-price{
+	float: right;
+	position: relative;
+	width: 25%;
+	text-align: right;
+}
 
 
 /*
