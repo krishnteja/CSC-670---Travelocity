@@ -959,6 +959,18 @@ Home Section style
     margin-left:10px;
 }
 
+/*
+Reservation Section style
+==================*/
+
+.reserve{
+    background: url(../images/home-bg1.jpg) no-repeat scroll  center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 190px;
+    width:100%;
+}
 
 /*
 Featured section style
@@ -1365,7 +1377,7 @@ work Section style
 }
 
 
-.main_footer i {
+.main_ter i {
     padding: 0px 5px;
     color: #ff0000;
 }
