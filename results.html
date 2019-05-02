@@ -33,6 +33,9 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
 
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+		
+		<!-- Search Results js -->
+		<script src="assets/js/resultFieldset.js"></script>
     </head>
 
     <body data-spy="scroll" data-target=".navbar-collapse">
@@ -64,11 +67,12 @@
                             <div class="col-md-9">
                                 <div class="navbar-socail text-right sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href="">Add your property</a></li>
-                                        <li><a href="">Account</a></li>
+                                        <li><a style="border-style: solid;border-width:0.1em; border-color: rgb(255, 255, 255); text-align: center;height:37px;" href="">Add your property</a></li>
+                                        <li><a href="">Account</a><img src="assets/images/pin.PNG"></li>
                                         <li><a href="">My Lists</a></li>
                                         <li><a href="">My Trips</a></li>
-                                        <li><a href="">Support</a></li>
+                                        <li><a href="">Support</a><img src="assets/images/pin.PNG"></li>
+                                        <li><a href=""> Español </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -107,10 +111,10 @@
                     <!-- navbar menu -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-left">
-                            <li class="selected-tab"><a href="#">Home</a></li> 
+                            <li><a href="#">Home</a></li> 
 							<li><a href="#">Vacation Packages</a></li>                    
                             <li><a href="#">Hotels</a></li>
-                            <li><a href="#">Cars</a></li>
+                            <li class="selected-tab"><a href="#">Cars</a></li>
                             <li><a href="#">Flights</a></li>
                             <li><a href="#">Cruises</a></li>
                             <li><a href="#">Things to Do</a></li>
@@ -125,177 +129,243 @@
                 </div> 
             </nav>
 
-            <!--Home Sections-->
-            <section id="home" class="home bg-black fix">
-                <div class="overlay"></div>
+
+
+            <!--Results Section-->
+            <section id="results" class="results bg-grey">
                 <div class="container">
                     <div class="row">
-                        <div class="main_home text-center">
-                            <div class="col-md-12">
-                                    <div class="slid_item">
+<!-- ***Replace h3 with total number of cars found, pickup location from search form and lowest price found -->
+		<h3>197 Cars at San Diego airport from $11</h3>
+		<p class="disclaimer"><i class="fa fa-warning"></i> We're experiencing high demand at this location. Book soon.</p>
+		<p>Total includes taxes and fees.</p>
+                        <div class="roomy-10">
+                            <div class="col-md-3">
+                                <aside id="filter-panel" class="sm-m-top-30">
+                                    <div class="filter-panel-close-wrapper">
+										<button class="btn-close btn-primary filter-panel-close" type="button" onclick="searchResults()">
+											<span class="icon icon-close" aria-hidden="true"></span>
+											<span class="alt">Close Filters</span>
+										</button>
+                                    </div>
+                                    <div class="pattern-filter">
+									<h3 class="section-header-main">
+										<span>Filter cars by<span>
+									</h3>
+	<!-- Fieldset Car type -->								
+	<fieldset class="filter-set">
+        <legend class="section-header-sub">
+            <div class="inner-legend">
+                <div id="label-carClass" role="heading" aria-level="3" class="filter-name section-header-main col-md-9">Car type</div>
+                    <div aria-hidden="true" class="from-label col-md-3">From:</div>
+                </div>
+        </legend>
+            <div data-filter-name="economy" class="check filter-option  carClass-  ">
+				<span class="control-and-label">
+					<input aria-label="13 Economy cars from $16" name="carClass" id="carClass-economy" class="ember-checkbox ember-view" type="checkbox">
+					<label for="carClass-economy" class="check filter-option">
+						<span aria-hidden="true" id="filter-carClass-economy-label" class="inline-label option-label">Economy (13)</span>
+					</label>
+				</span>
+				<span aria-hidden="true" class="inline-label lowest-price">$16</span>
+			</div>
+
+            <div data-filter-name="compact" class="check filter-option  carClass-  ">
+				<span class="control-and-label">
+					<input aria-label="13 Compact cars from $17" name="carClass" id="carClass-compact" class="ember-checkbox ember-view" type="checkbox">
+					<label for="carClass-compact" class="check filter-option">
+						<span aria-hidden="true" id="filter-carClass-compact-label" class="inline-label option-label">Compact (13)</span>
+					</label>
+				</span>
+				<span aria-hidden="true" class="inline-label lowest-price">$17</span>
+			</div>
+			
+            <div data-filter-name="midsize" class="check filter-option  carClass-  ">
+				<span class="control-and-label">
+					<input aria-label="17 Midsize cars from $17" name="carClass" id="carClass-midsize" class="ember-checkbox ember-view" type="checkbox">
+					<label for="carClass-midsize" class="check filter-option">
+						<span aria-hidden="true" id="filter-carClass-midsize-label" class="inline-label option-label">Midsize (17)</span>
+					</label>
+				</span>
+				<span aria-hidden="true" class="inline-label lowest-price">$17</span>
+			</div>
+
+            <div data-filter-name="standard" class="check filter-option  carClass-  ">
+				<span class="control-and-label">
+					<input aria-label="14 Standard cars from $23" name="carClass" id="carClass-standard" class="ember-checkbox ember-view" type="checkbox">
+					<label for="carClass-standard" class="check filter-option">
+						<span aria-hidden="true" id="filter-carClass-standard-label" class="inline-label option-label">Standard (14)</span>
+					</label>
+				</span>
+				<span aria-hidden="true" class="inline-label lowest-price">$23</span>
+			</div>
+
+                    <div data-filter-name="fullSize" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="15 Full-size cars from $19" name="carClass" id="carClass-fullSize" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-fullSize" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-fullSize-label" class="inline-label option-label">
+                    Full-size (15)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$19</span>
+</div>
+
+                    <div data-filter-name="premium" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="30 Premium cars from $34" name="carClass" id="carClass-premium" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-premium" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-premium-label" class="inline-label option-label">
+                    Premium (30)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$34</span>
+</div>
+
+                    <div data-filter-name="luxury" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="15 Luxury cars from $48" name="carClass" id="carClass-luxury" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-luxury" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-luxury-label" class="inline-label option-label">
+                    Luxury (15)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$48</span>
+</div>
+
+                    <div data-filter-name="convertible" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="10 Convertible cars from $108" name="carClass" id="carClass-convertible" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-convertible" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-convertible-label" class="inline-label option-label">
+                    Convertible (10)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$108</span>
+</div>
+
+                    <div data-filter-name="minivan" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="12 Minivan cars from $34" name="carClass" id="carClass-minivan" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-minivan" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-minivan-label" class="inline-label option-label">
+                    Minivan (12)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$34</span>
+</div>
+
+                    <div data-filter-name="suv" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="57 SUV cars from $22" name="carClass" id="carClass-suv" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-suv" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-suv-label" class="inline-label option-label">
+                    SUV (57)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$22</span>
+</div>
+
+                    <div data-filter-name="van" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="16 Van cars from $58" name="carClass" id="carClass-van" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-van" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-van-label" class="inline-label option-label">
+                    Van (16)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$58</span>
+</div>
+
+                    <div data-filter-name="pickup" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="13 Pickup cars from $17" name="carClass" id="carClass-pickup" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-pickup" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-pickup-label" class="inline-label option-label">
+                    Pickup (13)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$17</span>
+</div>
+
+                    <div data-filter-name="sportscar" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="4 Sports Car cars from $47" name="carClass" id="carClass-sportscar" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-sportscar" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-sportscar-label" class="inline-label option-label">
+                    Sports Car (4)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$47</span>
+</div>
+
+                    <div data-filter-name="other" class="check filter-option  carClass-  ">
+    <span class="control-and-label">
+            <input aria-label="9 Other cars from $24" name="carClass" id="carClass-other" class="ember-checkbox ember-view" type="checkbox">
+        <label for="carClass-other" class="check filter-option">
+                <span aria-hidden="true" id="filter-carClass-other-label" class="inline-label option-label">
+                    Other (9)
+                </span>
+        </label>
+    </span>
+
+        <span aria-hidden="true" class="inline-label lowest-price">$24</span>
+</div>
+
+<!---->            </fieldset>
 									
-                                        <!--<div class="home_text ">
-                                            <h2 class="text-white">Welcome to <strong>Made</strong></h2>
-                                            <h1 class="text-white">We Do Business All Of Time</h1>
-                                            <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
-                                        </div>
-
-                                        <div class="home_btns m-top-40">
-                                            <a href="" class="btn btn-primary m-top-20">Buy Now</a>
-                                            <a href="" class="btn btn-default m-top-20">Take a Tour</a>
-                                        </div>-->
-                                    </div><!-- End off slid item -->
-                                </div>
+									
+                                    </div><!-- End filter-->
+                                </aside>
                             </div>
-                        </div>
-                    </div><!--End off row-->
-                </div><!--End off container -->
-            </section> <!--End off Home Sections-->
-
-            <!--Featured Section-->
-            <section id="features" class="features bg-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_features fix roomy-70">
-                            <div class="col-md-4">
-                                <div class="features_item sm-m-top-30">
-                                    <div class="f_item_icon">
-                                        <i class="fa fa-check-circle"></i>
+                            <div class="col-md-7">
+                                <div class="sm-m-top-30">
+                                    <div class="sortbar box fix" id="sortby">
+										<ul class="bg-white">
+											<li>Sort by:</li> 
+											<li><a href="#">Total Price</a></li>
+											<li><a href="#">Customer Rating</a></li>	
+											<li><a href="#">Most Popular</a></li>
+											<li><a href="#">Rcommended</a></li>
+										</ul>
+									</div>
                                     </div>
-                                    <div class="f_item_text">
-                                        <!--<h3>Best Quality Design</h3>-->
-                                        <p>If you find a lower price, <span class="features-highlight">we'll match it and refund the difference.</span></p>
+                                    <div class="result-list flex-content bg-white box sm-m-top-10">
+                                        <div class="flex-area-primary col-md-9">car info</div>
+										<div class="flex-area-secondary col-md-3">price info</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="features_item sm-m-top-30">
-                                    <div class="f_item_icon">
-                                        <i class="fa fa-check-circle"></i>
+                            <div class="col-md-2">
+                                <div class="sopnsor-ads box sm-m-top-30">
+                                    <div class="bg-blue">
+                                        <span class="">Sponsored Listings</span>
                                     </div>
-                                    <div class="f_item_text">
-                                        <!--<h3>Responsive Design</h3>-->
-                                        <p>Update plans with <span class="features-highlight">no change or cancel fees from Travelocity.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="features_item sm-m-top-30">
-                                    <div class="f_item_icon">
-                                        <i class="fa fa-check-circle"></i>
-                                    </div>
-                                    <div class="f_item_text">
-                                        <!--<h3>Easy to Customize</h3>-->
-                                        <p>Search over <span class="features-highlight">400 airlines</span> and more than <span class="features-highlight">321,000 hotels worldwide.</span></p>
-                                    </div>
+									<div class="bg-white left"><br></div>
                                 </div>
                             </div>
                         </div>
                     </div><!-- End off row -->
                 </div><!-- End off container -->
             </section><!-- End off Featured Section-->
-
-            <!--product section-->
-            <section id="product" class="product bg-grey">
-                <div class="container">
-                    <div class="main_product roomy-40">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <div class="container">
-                                        <div class="row">
-										<h5 class="carousel-title">Today's Top Deals</h5>
-                                            <div class="col-sm-4">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/member-discount.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="assets/images/member-discount.jpg" class="popup-img"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption bg-white">
-                                                        <h5>Extra Savings on Your Escape</h5>
-                                                        <span>Create a free Travelocity account or sign in to immediately access Member Discounts of 50% off or more on our top hotels!</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/amazing-race.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="assets/images/work-img2.jpg" class="popup-img"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption bg-white">
-                                                        <h5>As Seen on The Amazing Race</h5>
-                                                        <span>These cruise lines and hotels were all featured by Travelocity as prizes on The Amazing Race Season 31 and all are, well, amazing.</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="port_item xs-m-top-30">
-                                                    <div class="port_img">
-                                                        <img src="assets/images/offer.jpg" alt="" />
-                                                        <div class="port_overlay text-center">
-                                                            <a href="assets/images/offer.jpg" class="popup-img"></a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="port_caption bg-white">
-                                                        <h5>Taco, line, fiesta time!</h5>
-                                                        <span>Cancun? Riviera Maya? Puerto Vallarta? Take in the vivid culture, colors and flavors of Mexico with big hotel discounts. Just make sure to book your room by May 5, 2019.</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section><!-- End off Product section -->
-
-            <!--Brand Section-->
-            <section id="brand" class="brand fix roomy-80">
-                <div class="container">
-                    <div class="row">
-                        <div class="main_brand text-center">
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img1.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img2.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img3.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img4.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img5.png" alt="" />
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-6">
-                                <div class="brand_item sm-m-top-20">
-                                    <img src="assets/images/cbrand-img6.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!-- End off Brand section -->
 
             <!--Call to  action section--
             <section id="action" class="action bg-primary roomy-40">
