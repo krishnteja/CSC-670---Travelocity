@@ -887,7 +887,7 @@ Home Section style
 ==================*/
 
 .home{
-    background: url(../images/home-bg.jpg) no-repeat scroll  center center;
+    background: url(../images/Car.jpg) no-repeat scroll  center center;
     background-size: cover;
     position: relative;
     padding-top: 300px;
@@ -957,6 +957,25 @@ Home Section style
 }
 .home_btns a{
     margin-left:10px;
+}
+
+.search-box{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(0,0,0,0.6);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 90%;
+    width: 70%;
+   
+}
+
+.search-box-title{
+    color: white;
+    font-weight: bold;
+    
 }
 
 /*

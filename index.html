@@ -5,10 +5,11 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title>Home</title>
+        <title>Discount Car Rentals: Find Deals On Cheap Car Rentals | Travelocity</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="favicon.ico">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
         <!--Google Font link-->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -64,11 +65,12 @@
                             <div class="col-md-9">
                                 <div class="navbar-socail text-right sm-text-center">
                                     <ul class="list-inline">
-                                        <li><a href="">Add your property</a></li>
-                                        <li><a href="">Account</a></li>
+                                        <li><a style="border-style: solid;border-width:0.1em; border-color: rgb(255, 255, 255); text-align: center;height:37px;" href="">Add your property</a></li>
+                                        <li><a href="">Account</a><img src="assets/images/pin.PNG"></li>
                                         <li><a href="">My Lists</a></li>
                                         <li><a href="">My Trips</a></li>
-                                        <li><a href="">Support</a></li>
+                                        <li><a href="">Support</a><img src="assets/images/pin.PNG"></li>
+                                        <li><a href=""> Español </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -107,10 +109,9 @@
                     <!-- navbar menu -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-left">
-                            <li class="selected-tab"><a href="#">Home</a></li> 
-							<li><a href="#">Vacation Packages</a></li>                    
+                            <li><a href="#">Vacation Packages</a></li>                    
                             <li><a href="#">Hotels</a></li>
-                            <li><a href="#">Cars</a></li>
+                            <li class="selected-tab"><a href="#">Cars</a></li>
                             <li><a href="#">Flights</a></li>
                             <li><a href="#">Cruises</a></li>
                             <li><a href="#">Things to Do</a></li>
@@ -125,15 +126,31 @@
                 </div> 
             </nav>
 
-            <!--Home Sections-->
-            <section id="home" class="home bg-black fix">
-                <div class="overlay"></div>
-                <div class="container">
+            <!--Cars Sections-->
+            <section id="Cars" class="home bg-black fix">
+                <div class="overlay">
+                  <div class="search-box">>
+                      
+                    <h1 class="search-box-title">Search Rental Car Deals</h1>
+                      <p><img src="assets/images/Car-Only.PNG">  <img src="assets/images/Car-Hotel.PNG">  <img src="assets/images/Car-Hotel-Flight.PNG">    <img src="assets/images/Car-Flight.PNG"></p>
+                      <form id="searchForm">
+                          <table><tr><td>Picking up</td><td>Drop-off</td></tr>
+                              <tr></tr>
+                          <tr><td><input type="text" id="pickupLoc"></td><td><input type="text" id="dropOffLoc"></td></tr></table>
+                          <br>
+                          <table><tr><td colspan="2">Pick-up date</td><td colspan="2">Drop-off date</td></tr>
+                              <tr></tr>
+                              <tr><td><input type="date" id="pickupDate"></td><td><input type="time" id="pickupTime"></td><td><input type="date" id="dropOffDate"></td><td><input type="time" id="dropOffTime"></td></tr>
+                          </table>
+                      </form>
+                  </div>
+                </div>
+               <!-- <div class="container">
                     <div class="row">
                         <div class="main_home text-center">
                             <div class="col-md-12">
                                     <div class="slid_item">
-                                        <!--<div class="home_text ">
+                                      <div class="home_text ">
                                             <h2 class="text-white">Welcome to <strong>Made</strong></h2>
                                             <h1 class="text-white">We Do Business All Of Time</h1>
                                             <h3 class="text-white">- We Create a <strong>Concept</strong> into The Market -</h3>
@@ -142,14 +159,14 @@
                                         <div class="home_btns m-top-40">
                                             <a href="" class="btn btn-primary m-top-20">Buy Now</a>
                                             <a href="" class="btn btn-default m-top-20">Take a Tour</a>
-                                        </div>-->
-                                    </div><!-- End off slid item -->
+                                        </div> 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div><!--End off row-->
-                </div><!--End off container -->
-            </section> <!--End off Home Sections-->
+                    </div>
+                </div>--><!--End off container -->
+            </section> <!--End off Cars Sections-->
 
             <!--Featured Section-->
             <section id="features" class="features bg-grey">
@@ -208,42 +225,42 @@
                                             <div class="col-sm-4">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="assets/images/member-discount.jpg" alt="" />
+                                                        <img src="assets/images/Weekend.PNG" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="assets/images/member-discount.jpg" class="popup-img"></a>
+                                                            <a href="assets/images/Weekend.PNG" class="popup-img"></a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption bg-white">
-                                                        <h5>Extra Savings on Your Escape</h5>
-                                                        <span>Create a free Travelocity account or sign in to immediately access Member Discounts of 50% off or more on our top hotels!</span>
+                                                        <h5>Weekend Road Trips</h5>
+                                                        <span>With all of the amazing drives, restaurants, plus these hotel deals, now’s the time to get road trippin’. Save on select hotels when you book by May 19, 2019.</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="assets/images/amazing-race.jpg" alt="" />
+                                                        <img src="assets/images/Select%20Rentals.PNG" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="assets/images/work-img2.jpg" class="popup-img"></a>
+                                                            <a href="assets/images/Select%20Rentals.PNG" class="popup-img"></a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption bg-white">
-                                                        <h5>As Seen on The Amazing Race</h5>
-                                                        <span>These cruise lines and hotels were all featured by Travelocity as prizes on The Amazing Race Season 31 and all are, well, amazing.</span>
+                                                        <h5>Wheels 'n Deals</h5>
+                                                        <span>Cruise into savings with special deals on select rental cars whenever you’re on the move. Book here, book now, save lots!</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="port_item xs-m-top-30">
                                                     <div class="port_img">
-                                                        <img src="assets/images/offer.jpg" alt="" />
+                                                        <img src="assets/images/Customer_First.PNG" alt="" />
                                                         <div class="port_overlay text-center">
-                                                            <a href="assets/images/offer.jpg" class="popup-img"></a>
+                                                            <a href="assets/images/Customer_First.PNG" class="popup-img"></a>
                                                         </div>
                                                     </div>
                                                     <div class="port_caption bg-white">
-                                                        <h5>Taco, line, fiesta time!</h5>
-                                                        <span>Cancun? Riviera Maya? Puerto Vallarta? Take in the vivid culture, colors and flavors of Mexico with big hotel discounts. Just make sure to book your room by May 5, 2019.</span>
+                                                        <h4>24/7 Social Media Support via @TravelocityHelp</h4>
+                                                        <span>Twitter.com/TravelocityHelp or Facebook.com/Travelocity</span>
                                                     </div>
                                                 </div>
                                             </div>
