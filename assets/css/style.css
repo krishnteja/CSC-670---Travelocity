@@ -971,14 +971,69 @@ Home Section style
     margin-top: 20px;
     margin-bottom: 10px;
     height: 90%;
-    width: 70%;
+    width: 50%;
    
 }
 
 .search-box-title{
     color: white;
+    font-size:2rem;
     font-weight: bold;
     
+}
+
+.search-labels{
+    color:darkgrey;
+    font-weight:bold;
+    margin:1px;
+     padding:0.5px;
+}
+
+.search-location{
+    margin: 1px;
+    width:300px;
+    height:35px;
+    padding:0.5px;
+    border-radius: 3px;
+}
+
+.search-dates{
+     width:130px;
+    height:35px;
+     border-radius: 3px;
+}
+
+.search-times{
+     width:60px;
+    height:35px;
+     border-radius: 3px;
+}
+
+
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+}
+
+.btn-label
+{
+    color:black;
+    font-size:1.25rem;
+    font-weight:bold;
+}
+
+.search-btn
+{
+    height:45px;
+    width:90px;
+    background:linear-gradient(to top,#709C02 0,#90C900 100%);
+    border-radius: 2px;
+    border-width:0px;
+}
+
+
+.advanced-text
+{
+    color: white;
 }
 
 /*rfa 05-02
@@ -1081,6 +1136,20 @@ Reservation Section style
     padding-top: 300px;
     padding-bottom: 190px;
     width:100%;
+}
+
+.search-bar-collapse{
+ padding-right: 15px;
+  padding-left: 15px;
+    padding-top: 10px;
+  padding-bottom: 10px;
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    border-bottom:1px solid;
+    border-color:darkgrey;
 }
 
 /*

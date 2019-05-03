@@ -70,7 +70,7 @@
                                         <li><a href="">My Lists</a></li>
                                         <li><a href="">My Trips</a></li>
                                         <li><a href="">Support</a><img src="assets/images/pin.PNG"></li>
-                                        <li><a href=""> Español </a></li>
+                                        <li><a href="">Español </a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -129,19 +129,23 @@
             <!--Cars Sections-->
             <section id="Cars" class="home bg-black fix">
                 <div class="overlay">
-                  <div class="search-box">>
+                  <div class="search-box">
                       
                     <h1 class="search-box-title">Search Rental Car Deals</h1>
-                      <p><img src="assets/images/Car-Only.PNG">  <img src="assets/images/Car-Hotel.PNG">  <img src="assets/images/Car-Hotel-Flight.PNG">    <img src="assets/images/Car-Flight.PNG"></p>
+                      <p><img src="assets/images/Car-Only.PNG" style="filter: contrast(100%);">  <img src="assets/images/Car-Hotel.PNG" style="filter: contrast(100%);">  <img src="assets/images/Car-Hotel-Flight.PNG" style="filter: contrast(100%);">    <img src="assets/images/Car-Flight.PNG" style="filter: contrast(100%);"></p>
                       <form id="searchForm">
-                          <table><tr><td>Picking up</td><td>Drop-off</td></tr>
+                          <table><tr><td class="search-labels">Picking up</td><td class="search-labels">Drop-off</td></tr>
                               <tr></tr>
-                          <tr><td><input type="text" id="pickupLoc"></td><td><input type="text" id="dropOffLoc"></td></tr></table>
+                          <tr><td style="width:320px;"><input type="text" id="pickupLoc" class="search-location"><p> </p> </td><td style="width:320px;"> <input type="text" id="dropOffLoc" class="search-location"></td></tr></table>
                           <br>
-                          <table><tr><td colspan="2">Pick-up date</td><td colspan="2">Drop-off date</td></tr>
+                          <table><tr><td colspan="3" class="search-labels">Pick-up date</td><td colspan="3" class="search-labels">Drop-off date</td></tr>
                               <tr></tr>
-                              <tr><td><input type="date" id="pickupDate"></td><td><input type="time" id="pickupTime"></td><td><input type="date" id="dropOffDate"></td><td><input type="time" id="dropOffTime"></td></tr>
+                              <tr><td colspan="2" style="width:140px;"><input type="date" id="pickupDate" class="search-dates glyphicon-calendar"></td><td style="width:70px;"><input type="time" id="pickupTime" class="search-times" ></td><td colspan="2" style="width:140px;"><input type="date" id="dropOffDate" class="search-dates glyphicon-calendar"></td><td style="width:70px;"><input type="time" id="dropOffTime" class="search-times"></td></tr>
                           </table>
+                          <br>
+                          <p class="advanced-text"> Advanced Options <img src="assets/images/Advanced.png"></p>
+                          <br>
+                         <button type="button" class="search-btn" id="BtnSearch"><span class="btn-label">Search</span></button> 
                       </form>
                   </div>
                 </div>
