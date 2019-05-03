@@ -80,8 +80,7 @@ jQuery(document).ready(function ($) {
         autoplaySpeed: 2000
     });
 
-
-
+    
 
 //---------------------------------------------
 // Scroll Up 
