@@ -105,7 +105,7 @@
                     <!-- navbar menu -->
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="nav navbar-nav navbar-left">
-                            <li><a href="#">Home</a></li> 
+                            <li><a href="index.html">Home</a></li> 
 							<li><a href="#">Vacation Packages</a></li>                    
                             <li><a href="#">Hotels</a></li>
                             <li class="selected-tab"><a href="#">Cars</a></li>
@@ -128,7 +128,7 @@
                 <div class="container">
                     <div class="row">
 <!-- ***Replace h3 with total number of cars found, pickup location from search form and lowest price found -->
-		<h3>197 Cars at San Diego airport from $11</h3>
+		<span class="h3">197 Cars at Portland, OR airport from $16</span>
 		<p class="disclaimer"><i class="fa fa-warning"></i> We're experiencing high demand at this location. Book soon.</p>
 		<p>Total includes taxes and fees.</p>
                         <div class="roomy-10">
@@ -148,8 +148,8 @@
 	<fieldset class="filter-set">
         <legend class="section-header-sub">
             <div class="inner-legend">
-                <div id="label-carClass" role="heading" aria-level="3" class="filter-name section-header-main col-md-9">Car type</div>
-                    <div aria-hidden="true" class="from-label col-md-3">From:</div>
+                <div id="label-carClass" role="heading" aria-level="3" class="filter-name section-header-main col-md-9"><span>Car type</span></div>
+                    <div aria-hidden="true" class="from-label col-md-3"><span class="text-right">From:</span></div>
                 </div>
         </legend>
         
@@ -302,9 +302,9 @@
                                 </aside>
                             </div>
 
-<div class="col-md-7">
+<div class="col-md-7 pr-0">
     <!-- Sort bar -->
-    <div class="sm-m-top-30 pb-3">
+    <div class="sm-m-top-30 pb-3 pr-0">
             <div class="sortbar box fix" id="sortby">
                 <ul class="bg-white">
 				<li>Sort by:</li> 
@@ -314,94 +314,188 @@
 				<li><a href="#">Rcommended</a></li>
 				</ul>
             </div>
+    </div>
+    
+<!-- Car 1 Results section -->
+<div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">			
+	<!--begin car row -->
+    <div> 
+		<div class="flex-area-primary col-md-10 prl-0"> <!-- left side -->
+			<div class=""> <!--car details-->
+				<div class="flex-area-primary col-md-3 prl-0"><!--left side vendor details-->
+					<div class="text-center" id="carType"></div>
+					<div class="text-center" id="company"></div>
+                    <div class="f_item_icon text-center"><span class="text-green"><i class="fa fa-smile-o"></i>&nbsp;76% </span>recommend<br>(27 rated)</div>
+				</div>
+        
+					<div class="pr-0 flex-area-secondary col-md-9 "><!--right side car details-->
+						<div class="h3 text-bold mt-0 mb-0"id="carType-text"></div>
+                        <div><span>Hyundai Elantra or similar</span>
+                        
+								<div class="f_item_icon">
+									<i class="fa fa-user"></i>&nbsp;5&nbsp;
+									<img class="car-properties" src="assets/images/cardoors.png">&nbsp;4&nbsp;
+								</div>
+							   
+							<div>
+                            <img class="fa f_item_icon" src="assets/images/engine-w.png">
+								<span class="" id="specifications"></span>&nbsp;<br>
+                                <i class="fa fa-clock-o"></i>&nbsp;Unlimited mileage&nbsp;
+								<i class="fa fa-info-circle"></i><br>
+                                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Free Cancellation</span><br>
+                                <i class="fa fa-plane"></i>&nbsp;Pick-up:&nbsp;<span id="pickupLoc"></span>
+                            </div>
+				        </div>
+					</div>        
+			</div><!-- end of car details -->
+		</div><!-- end of left side -->
+		
+		<div class="flex-area-secondary col-md-2 text-right prl-0"><!-- right side -->
+            <div class="f_item_icon">
+                <i class="fa fa-heart"></i><br>
+                    <span class="h3-size" id="price"></span>
+                <br>per day<br>
+                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Pay now</span><br>
+                <button type="button" class="reserve-btn" id="BtnReserve" >
+					<a class="btn-label" href="reserve.html">Reserve</a>
+				</button> 
+			</div>   
         </div>
+	</div> <!--end car 1 row -->
+</div><!-- end car results-->
 
-<!-- Car Results -->
-<div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">
-        <div class="flex-area-primary col-md-9">
-            <label class="" id="carType"></label>
-            <label class="" id="company"></label>
-                
-            <label class="" id="pickupLoc"></label>
-            <label class="" id="specifications"></label>
+    
+    <!-- Car 2 Results section -->
+<div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">			
+	<!--begin car 1 row -->
+    <div> 
+		<div class="flex-area-primary col-md-10 prl-0"> <!-- left side -->
+			<div class=""> <!--car details-->
+				<div class="flex-area-primary col-md-3 prl-0"><!--left side vendor details-->
+					<div class="text-center" id="carType-2"></div>
+					<div class="text-center" id="company-2"></div>
+                    <div class="f_item_icon text-center"><span class="text-green"><i class="fa fa-smile-o"></i>&nbsp;76% </span>recommend<br>(27 rated)</div>
+				</div>
         
+					<div class="pr-0 flex-area-secondary col-md-9 "><!--right side car details-->
+						<div class="h3 text-bold mt-0 mb-0"id="carType-text-2"></div>
+                        <div><span>Nissan Versa or similar</span>
+                        
+								<div class="f_item_icon">
+									<i class="fa fa-user"></i>&nbsp;5&nbsp;
+									<img class="car-properties" src="assets/images/cardoors.png">&nbsp;4&nbsp;
+								</div>
+							   
+							<div>
+                            <img class="fa f_item_icon" src="assets/images/engine-w.png">
+								<span class="" id="specifications-2"></span>&nbsp;<br>
+                                <i class="fa fa-clock-o"></i>&nbsp;Unlimited mileage&nbsp;
+								<i class="fa fa-info-circle"></i><br>
+                                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Free Cancellation</span><br>
+                                <i class="fa fa-plane"></i>&nbsp;Pick-up:&nbsp;<span id="pickupLoc-2"></span>
+                            </div>
+				        </div>
+					</div>        
+			</div><!-- end of car details -->
+		</div><!-- end of left side -->
+		
+		<div class="flex-area-secondary col-md-2 text-right prl-0"><!-- right side -->
+            <div class="f_item_icon">
+                <i class="fa fa-heart"></i><br>
+                    <span class="h3-size" id="price-2"></span>
+                <br>per day<br>
+                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Pay now</span><br>
+                <button type="button" class="reserve-btn" id="BtnReserve" >
+					<a class="btn-label" href="#">Reserve</a>
+				</button> 
+			</div>   
         </div>
+	</div> <!--end row -->
+</div><!-- end car 2 results-->
     
-        <div class="flex-area-secondary col-md-3">
-            <label class="" id="price"></label></div>
-            <div class="">
-                <button class="btn-primary" type="button" onclick="">
-				<span class="alt">Reserve</span>
-				</button>
-            </div>
-        </div>
-    
-    <div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">
-        <div class="flex-area-primary col-md-9">
-            <label class="" id="carType-2"></label>
-            <label class="" id="company-2"></label>
-                
-            <label class="" id="pickupLoc-2"></label>
-            <label class="" id="specifications-2"></label>
+    <!-- Car 3 Results section -->
+<div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">			
+	<!--begin car 1 row -->
+    <div> 
+		<div class="flex-area-primary col-md-10 prl-0"> <!-- left side -->
+			<div class=""> <!--car details-->
+				<div class="flex-area-primary col-md-3 prl-0"><!--left side vendor details-->
+					<div class="text-center" id="carType-3"></div>
+					<div class="text-center" id="company-3"></div>
+                    <div class="f_item_icon text-center"><span class="text-green"><i class="fa fa-smile-o"></i>&nbsp;76% </span>recommend<br>(27 rated)</div>
+				</div>
         
+					<div class="pr-0 flex-area-secondary col-md-9 "><!--right side car details-->
+						<div class="h3 text-bold mt-0 mb-0"id="carType-text-3"></div>
+                        <div><span>Dodge Caravan or similar</span>
+                        
+								<div class="f_item_icon">
+									<i class="fa fa-user"></i>&nbsp;5&nbsp;
+									<img class="car-properties" src="assets/images/cardoors.png">&nbsp;4&nbsp;
+								</div>
+							   
+							<div>
+                            <img class="fa f_item_icon" src="assets/images/engine-w.png">
+								<span class="" id="specifications-3"></span>&nbsp;<br>
+                                <i class="fa fa-clock-o"></i>&nbsp;Unlimited mileage&nbsp;
+								<i class="fa fa-info-circle"></i><br>
+                                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Free Cancellation</span><br>
+                                <i class="fa fa-plane"></i>&nbsp;Pick-up:&nbsp;<span id="pickupLoc-3"></span>
+                            </div>
+				        </div>
+					</div>        
+			</div><!-- end of car details -->
+		</div><!-- end of left side -->
+		
+		<div class="flex-area-secondary col-md-2 text-right prl-0"><!-- right side -->
+            <div class="f_item_icon">
+                <i class="fa fa-heart"></i><br>
+                    <span class="h3-size" id="price-3"></span>
+                <br>per day<br>
+                <span class="text-green"><i class="fa fa-check"></i>&nbsp;Pay now</span><br>
+                <button type="button" class="reserve-btn" id="BtnReserve" >
+					<a class="btn-label" href="#">Reserve</a>
+				</button> 
+			</div>   
         </div>
+	</div> <!--end row -->
+</div><!-- end car 3 results-->
     
-        <div class="flex-area-secondary col-md-3">
-            <label class="" id="price-2"></label></div>
-        <div class="">
-                <button class="btn-primary" type="button" onclick="">
-				<span class="alt">Reserve</span>
-				</button>
-            </div>
-        </div>
-    
-</div>
-                            
+</div> 
                             
 <!-- Sponsor Ads -->                            
-<div class="col-md-2">
-                                <div class="sopnsor-ads box sm-m-top-30">
-                                    <div class="bg-blue">
-                                        <span class="">Sponsored Listings</span>
-                                    </div>
-									<div class="bg-white left"><br></div>
-                                </div>
-                            </div>
+<div class="col-md-2 pr-0">
+    <div class="sopnsor-ads box sm-m-top-30">
+        <div class="bg-blue">
+            <span class="">Sponsored Listings</span>
+        </div>
+        <div class="bg-white left"><img src="assets/images/side-ad.jpg"></div>
+    </div>
+</div>
+                           
                         </div>
                     </div><!-- End off row -->
                 </div><!-- End of container -->
             </section><!-- End of Results Section-->
 
-            <!--Call to  action section--
-            <section id="action" class="action bg-primary roomy-40">
+            <!-- Footer Section-->
+            <section id="action" class="action">
                 <div class="container">
                     <div class="row">
-                        <div class="maine_action">
-                            <div class="col-md-8">
-                                <div class="action_item text-center">
-                                    <h2 class="text-white text-uppercase">Your Promotion Text Will Be Here</h2>
+                        <footer>
+                            <div class="main_footer fix  text-center p-bottom-30 m-top-20">
+                                <div class="col-md-12">
+                                    <p class="wow fadeInRight" data-wow-duration="1s">
+                                        © 2019 Travelscape LLC. All rights reserved. Travelocity, the Stars Design, and The Roaming Gnome Design are trademarks of Travelscape LLC. Use of this Web site constitutes acceptance of the Travelocity User Agreement and Privacy Policy. CST# 2083930-50
+                                    </p>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="action_btn text-left sm-text-center">
-                                    <a href="" class="btn btn-default">Purchase Now</a>
-                                </div>
-                            </div>
-                        </div>
+                        </footer>
                     </div>
                 </div>
-            </section>-->
+            </section>
 
-                <div class="main_footer fix  text-center p-top-40 p-bottom-30 m-top-80">
-                    <div class="col-md-12">
-                        <p class="wow fadeInRight" data-wow-duration="1s">
-                            © 2019 Travelscape LLC. All rights reserved. Travelocity, the Stars Design, and The Roaming Gnome Design are trademarks of Travelscape LLC. Use of this Web site constitutes acceptance of the Travelocity User Agreement and Privacy Policy. CST# 2083930-50
-                        </p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-
+            </div>
         <!-- JS includes -->
         <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
         <script src="assets/js/vendor/bootstrap.min.js"></script>
