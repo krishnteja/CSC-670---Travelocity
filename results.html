@@ -38,7 +38,7 @@
 		<script src="assets/js/resultFieldset.js"></script>
     </head>
 
-    <body data-spy="scroll" data-target=".navbar-collapse">
+    <body data-spy="scroll" data-target=".navbar-collapse" onload="dataFilterSet();searchResults()">
 
         <!-- Preloader -->
         <div id="loading">
@@ -94,12 +94,6 @@
 
 
                 <div class="container"> 
-                <!--    <div class="attr-nav">
-                        <ul>
-                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        </ul>
-                    </div> -->
-
                     <!-- Start Header Navigation -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
@@ -129,8 +123,6 @@
                 </div> 
             </nav>
 
-
-
             <!--Results Section-->
             <section id="results" class="results bg-grey">
                 <div class="container">
@@ -143,15 +135,15 @@
                             <div class="col-md-3">
                                 <aside id="filter-panel" class="sm-m-top-30">
                                     <div class="filter-panel-close-wrapper">
-										<button class="btn-close btn-primary filter-panel-close" type="button" onclick="searchResults()">
+										<button class="btn-close btn-primary filter-panel-close hide" type="button" onclick="">
 											<span class="icon icon-close" aria-hidden="true"></span>
 											<span class="alt">Close Filters</span>
 										</button>
                                     </div>
-                                    <div class="pattern-filter">
-									<h3 class="section-header-main">
-										<span>Filter cars by<span>
-									</h3>
+                                    
+<div class="pattern-filter">
+    <h3 class="section-header-main"><span>Filter cars by</span></h3>
+                                            
 	<!-- Fieldset Car type -->								
 	<fieldset class="filter-set">
         <legend class="section-header-sub">
@@ -160,201 +152,214 @@
                     <div aria-hidden="true" class="from-label col-md-3">From:</div>
                 </div>
         </legend>
+        
             <div data-filter-name="economy" class="check filter-option  carClass-  ">
 				<span class="control-and-label">
-					<input aria-label="13 Economy cars from $16" name="carClass" id="carClass-economy" class="ember-checkbox ember-view" type="checkbox">
+					<input name="carClass" id="carClass-economy" class="ember-checkbox ember-view" type="checkbox">
 					<label for="carClass-economy" class="check filter-option">
-						<span aria-hidden="true" id="filter-carClass-economy-label" class="inline-label option-label">Economy (13)</span>
+						<span aria-hidden="true" id="filter-carClass-economy-label" class="inline-label option-label"></span>
 					</label>
 				</span>
-				<span aria-hidden="true" class="inline-label lowest-price">$16</span>
+				<span aria-hidden="true" id="price-carClass-economy-label" class="inline-label lowest-price"></span>
 			</div>
 
             <div data-filter-name="compact" class="check filter-option  carClass-  ">
 				<span class="control-and-label">
-					<input aria-label="13 Compact cars from $17" name="carClass" id="carClass-compact" class="ember-checkbox ember-view" type="checkbox">
+					<input aria-label="" name="carClass" id="carClass-compact" class="ember-checkbox ember-view" type="checkbox">
 					<label for="carClass-compact" class="check filter-option">
-						<span aria-hidden="true" id="filter-carClass-compact-label" class="inline-label option-label">Compact (13)</span>
+						<span aria-hidden="true" id="filter-carClass-compact-label" class="inline-label option-label"></span>
 					</label>
 				</span>
-				<span aria-hidden="true" class="inline-label lowest-price">$17</span>
+				<span aria-hidden="true" id="price-carClass-compact-label" class="inline-label lowest-price"></span>
 			</div>
 			
             <div data-filter-name="midsize" class="check filter-option  carClass-  ">
 				<span class="control-and-label">
-					<input aria-label="17 Midsize cars from $17" name="carClass" id="carClass-midsize" class="ember-checkbox ember-view" type="checkbox">
+					<input aria-label="" name="carClass" id="carClass-midsize" class="ember-checkbox ember-view" type="checkbox">
 					<label for="carClass-midsize" class="check filter-option">
-						<span aria-hidden="true" id="filter-carClass-midsize-label" class="inline-label option-label">Midsize (17)</span>
+						<span aria-hidden="true" id="filter-carClass-midsize-label" class="inline-label option-label"></span>
 					</label>
 				</span>
-				<span aria-hidden="true" class="inline-label lowest-price">$17</span>
+				<span aria-hidden="true" id="price-carClass-midsize-label" class="inline-label lowest-price"></span>
 			</div>
 
             <div data-filter-name="standard" class="check filter-option  carClass-  ">
 				<span class="control-and-label">
-					<input aria-label="14 Standard cars from $23" name="carClass" id="carClass-standard" class="ember-checkbox ember-view" type="checkbox">
+					<input aria-label="" name="carClass" id="carClass-standard" class="ember-checkbox ember-view" type="checkbox">
 					<label for="carClass-standard" class="check filter-option">
-						<span aria-hidden="true" id="filter-carClass-standard-label" class="inline-label option-label">Standard (14)</span>
+						<span aria-hidden="true" id="filter-carClass-standard-label" class="inline-label option-label"></span>
 					</label>
 				</span>
-				<span aria-hidden="true" class="inline-label lowest-price">$23</span>
+				<span aria-hidden="true" id="price-carClass-standard-label" class="inline-label lowest-price"></span>
 			</div>
 
                     <div data-filter-name="fullSize" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="15 Full-size cars from $19" name="carClass" id="carClass-fullSize" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-fullSize" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-fullSize" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-fullSize-label" class="inline-label option-label">
-                    Full-size (15)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-fullSize-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$19</span>
+        <span aria-hidden="true" id="price-carClass-fullSize-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="premium" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="30 Premium cars from $34" name="carClass" id="carClass-premium" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-premium" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-premium" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-premium-label" class="inline-label option-label">
-                    Premium (30)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-premium-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$34</span>
+        <span aria-hidden="true" id="price-carClass-premium-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="luxury" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="15 Luxury cars from $48" name="carClass" id="carClass-luxury" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-luxury" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-luxury" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-luxury-label" class="inline-label option-label">
-                    Luxury (15)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-luxury-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$48</span>
+        <span aria-hidden="true" id="price-carClass-luxury-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="convertible" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="10 Convertible cars from $108" name="carClass" id="carClass-convertible" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-convertible" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-convertible" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-convertible-label" class="inline-label option-label">
-                    Convertible (10)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-convertible-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$108</span>
+        <span aria-hidden="true" id="price-carClass-convertible-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="minivan" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="12 Minivan cars from $34" name="carClass" id="carClass-minivan" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-minivan" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-minivan" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-minivan-label" class="inline-label option-label">
-                    Minivan (12)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-minivan-label" class="inline-label option-label"></span>
         </label>
     </span>
 
-        <span aria-hidden="true" class="inline-label lowest-price">$34</span>
+        <span aria-hidden="true" id="price-carClass-minivan-label" class="inline-label lowest-price"></span>
 </div>
-
                     <div data-filter-name="suv" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="57 SUV cars from $22" name="carClass" id="carClass-suv" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-suv" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-suv" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-suv-label" class="inline-label option-label">
-                    SUV (57)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-suv-label" class="inline-label option-label"></span>
         </label>
     </span>
 
-        <span aria-hidden="true" class="inline-label lowest-price">$22</span>
+        <span aria-hidden="true" id="price-carClass-suv-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="van" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="16 Van cars from $58" name="carClass" id="carClass-van" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-van" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-van" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-van-label" class="inline-label option-label">
-                    Van (16)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-van-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$58</span>
+        <span aria-hidden="true" id="price-carClass-van-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="pickup" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="13 Pickup cars from $17" name="carClass" id="carClass-pickup" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-pickup" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-pickup" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-pickup-label" class="inline-label option-label">
-                    Pickup (13)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-pickup-label" class="inline-label option-label"></span>
         </label>
     </span>
 
-        <span aria-hidden="true" class="inline-label lowest-price">$17</span>
+        <span aria-hidden="true" id="price-carClass-pickup-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="sportscar" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="4 Sports Car cars from $47" name="carClass" id="carClass-sportscar" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-sportscar" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-sportscar" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-sportscar-label" class="inline-label option-label">
-                    Sports Car (4)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-sportscar-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$47</span>
+        <span aria-hidden="true" id="price-carClass-sportscar-label" class="inline-label lowest-price"></span>
 </div>
 
                     <div data-filter-name="other" class="check filter-option  carClass-  ">
     <span class="control-and-label">
-            <input aria-label="9 Other cars from $24" name="carClass" id="carClass-other" class="ember-checkbox ember-view" type="checkbox">
+            <input aria-label="" name="carClass" id="carClass-other" class="ember-checkbox ember-view" type="checkbox">
         <label for="carClass-other" class="check filter-option">
-                <span aria-hidden="true" id="filter-carClass-other-label" class="inline-label option-label">
-                    Other (9)
-                </span>
+                <span aria-hidden="true" id="filter-carClass-other-label" class="inline-label option-label"></span>
         </label>
     </span>
-
-        <span aria-hidden="true" class="inline-label lowest-price">$24</span>
+        <span aria-hidden="true" id="price-carClass-other-label" class="inline-label lowest-price"></span>
 </div>
 
-<!---->            </fieldset>
+</fieldset> <!--FIELDSET-->
 									
 									
-                                    </div><!-- End filter-->
+</div><!-- End pattern-filter-->
                                 </aside>
                             </div>
-                            <div class="col-md-7">
-                                <div class="sm-m-top-30">
-                                    <div class="sortbar box fix" id="sortby">
-										<ul class="bg-white">
-											<li>Sort by:</li> 
-											<li><a href="#">Total Price</a></li>
-											<li><a href="#">Customer Rating</a></li>	
-											<li><a href="#">Most Popular</a></li>
-											<li><a href="#">Rcommended</a></li>
-										</ul>
-									</div>
-                                    </div>
-                                    <div class="result-list flex-content bg-white box sm-m-top-10">
-                                        <div class="flex-area-primary col-md-9">car info</div>
-										<div class="flex-area-secondary col-md-3">price info</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
+
+<div class="col-md-7">
+    <!-- Sort bar -->
+    <div class="sm-m-top-30 pb-3">
+            <div class="sortbar box fix" id="sortby">
+                <ul class="bg-white">
+				<li>Sort by:</li> 
+				<li><a href="#">Total Price</a></li>
+				<li><a href="#">Customer Rating</a></li>	
+				<li><a href="#">Most Popular</a></li>
+				<li><a href="#">Rcommended</a></li>
+				</ul>
+            </div>
+        </div>
+
+<!-- Car Results -->
+<div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">
+        <div class="flex-area-primary col-md-9">
+            <label class="" id="carType"></label>
+            <label class="" id="company"></label>
+                
+            <label class="" id="pickupLoc"></label>
+            <label class="" id="specifications"></label>
+        
+        </div>
+    
+        <div class="flex-area-secondary col-md-3">
+            <label class="" id="price"></label></div>
+            <div class="">
+                <button class="btn-primary" type="button" onclick="">
+				<span class="alt">Reserve</span>
+				</button>
+            </div>
+        </div>
+    
+    <div class="result-list flex-content bg-white box fix sm-m-top-30 m-top-10">
+        <div class="flex-area-primary col-md-9">
+            <label class="" id="carType-2"></label>
+            <label class="" id="company-2"></label>
+                
+            <label class="" id="pickupLoc-2"></label>
+            <label class="" id="specifications-2"></label>
+        
+        </div>
+    
+        <div class="flex-area-secondary col-md-3">
+            <label class="" id="price-2"></label></div>
+        <div class="">
+                <button class="btn-primary" type="button" onclick="">
+				<span class="alt">Reserve</span>
+				</button>
+            </div>
+        </div>
+    
+</div>
+                            
+                            
+<!-- Sponsor Ads -->                            
+<div class="col-md-2">
                                 <div class="sopnsor-ads box sm-m-top-30">
                                     <div class="bg-blue">
                                         <span class="">Sponsored Listings</span>
@@ -364,8 +369,8 @@
                             </div>
                         </div>
                     </div><!-- End off row -->
-                </div><!-- End off container -->
-            </section><!-- End off Featured Section-->
+                </div><!-- End of container -->
+            </section><!-- End of Results Section-->
 
             <!--Call to  action section--
             <section id="action" class="action bg-primary roomy-40">
