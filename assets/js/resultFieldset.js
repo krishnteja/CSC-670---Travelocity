@@ -6,16 +6,30 @@ var options = {
 
 var searchValues = [
 	{
-	carType: 'Economy',
-	price: 10,
-	company: 'Advantage',
+	carType: 'Midsize',
+	price: 38,
+	company: 'Alamo',
 	pickupLoc: 'Shuttle to counter and car',
 	specifications: 'Automatic transmission'
 	},
     {
 	carType: 'Compact',
 	price: 10,
-	company: 'Alamo',
+	company: 'Advantage',
+	pickupLoc: 'Shuttle to counter and car',
+	specifications: 'Automatic transmission'
+	},
+    {
+	carType: 'Mini Van',
+	price: 52,
+	company: 'Mex',
+	pickupLoc: 'Shuttle to counter and car',
+	specifications: 'Automatic transmission'
+	},
+    {
+	carType: 'SUV',
+	price: 55,
+	company: 'Hertz',
 	pickupLoc: 'Shuttle to counter and car',
 	specifications: 'Automatic transmission'
 	},
@@ -34,6 +48,15 @@ function getVendorLogo(ven){
     	break;
     	case "Advantage": 
     	return '<img src="assets/images/advantage.png">'
+        break;
+    	case "Mex": 
+    	return '<img src="assets/images/mex.png">'
+        break;
+    	case "Fox": 
+    	return '<img src="assets/images/fox.png">'
+        break;
+    	case "Hertz": 
+    	return '<img src="assets/images/hertz.png">'
     }
   }
 }
@@ -50,23 +73,43 @@ function getVehicleImg(vic){
     	break;
     	case "Compact": 
     	return '<img src="assets/images/compact.jpg">'
+        break;
+        case "Midsize": 
+    	return '<img src="assets/images/midsize.jpg">'
+        break;
+        case "Mini Van": 
+    	return '<img src="assets/images/minivan.jpg">'
+        break;
+        case "SUV": 
+    	return '<img src="assets/images/suv.jpg">'
+        break;
     }
   }
 }
     
 //var carList = new List('cars', options, values);
 document.getElementById("carType").innerHTML = getVehicleImg(searchValues[0].carType);
-document.getElementById("price").innerHTML = searchValues[0].price;
+document.getElementById("carType-text").innerHTML = searchValues[0].carType;   
+document.getElementById("price").innerHTML = "$" + searchValues[0].price;
 document.getElementById("company").innerHTML = getVendorLogo(searchValues[0].company);
 document.getElementById("pickupLoc").innerHTML = searchValues[0].pickupLoc;
 document.getElementById("specifications").innerHTML = searchValues[0].specifications;
     
 document.getElementById("carType-2").innerHTML = getVehicleImg(searchValues[1].carType);
-document.getElementById("price-2").innerHTML = searchValues[1].price;
+document.getElementById("carType-text-2").innerHTML = searchValues[1].carType; 
+document.getElementById("price-2").innerHTML = "$" + searchValues[1].price;
 document.getElementById("company-2").innerHTML = getVendorLogo(searchValues[1].company);
 document.getElementById("pickupLoc-2").innerHTML = searchValues[1].pickupLoc;
-document.getElementById("specifications-2").innerHTML = searchValues[1].specifications;    
-}
+document.getElementById("specifications-2").innerHTML = searchValues[1].specifications;  
+    
+document.getElementById("carType-3").innerHTML = getVehicleImg(searchValues[2].carType);
+document.getElementById("carType-text-3").innerHTML = searchValues[2].carType; 
+document.getElementById("price-3").innerHTML = "$" + searchValues[2].price;
+document.getElementById("company-3").innerHTML = getVendorLogo(searchValues[2].company);
+document.getElementById("pickupLoc-3").innerHTML = searchValues[2].pickupLoc;
+document.getElementById("specifications-3").innerHTML = searchValues[2].specifications;     
+    
+} //end searchResults()
 
 
 function dataFilterSet(){
@@ -88,7 +131,7 @@ function dataFilterSet(){
         { 
           carType: 'Midsize',
           qty: 17,
-          price: 17
+          price: 38
       },
         { 
           carType: 'Standard',
@@ -189,4 +232,4 @@ function dataFilterSet(){
     
     document.getElementById("filter-carClass-other-label").innerHTML = filterValues[13].carType + " (" + filterValues[13].qty + ")";
     document.getElementById("price-carClass-other-label").innerHTML = "$" + filterValues[13].price;
-}
+} //end dataFilterSet()
