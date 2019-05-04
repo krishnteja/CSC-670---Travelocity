@@ -1158,11 +1158,29 @@ Reservation Section style
     color:gray;
 }
 
+.just-padding{
+    padding-bottom:10px;
+}
+
+.left-float{
+    float:left;
+    line-height:53px;
+}
 
 .right-span{
     float: right;
     width: 200px;
      color:gray;
+}
+
+.right-float{
+    float:right;
+    line-height:39px;
+    padding-right:10px;
+}
+
+.right-align{
+    text-align:right;
 }
 
 .switch {
@@ -1246,13 +1264,13 @@ input:checked + .slider:before {
 
 .car-center{
   float:left;
-    height:250px;
+    height:225px;
     width:385px;;
 }
 
 .car-right{
      text-align:right;
-    height:250px;
+    height:225px;
     width:300px;
     float:right;
 }
@@ -1265,7 +1283,7 @@ input:checked + .slider:before {
 .car-properties-info{
     padding-left:10px;
     float:right;
-    height:250px;
+    height:225px;
     width:764px;
 }
 
@@ -1320,13 +1338,25 @@ input:checked + .slider:before {
 }
 
 .tick-icon{
-    width:13px;
-    height:18px;
+    width:15px;
+    height:15px;
 }
 
 .no-spaces{
     margin: 0;
     padding: 0;
+}
+
+.bottom-border{
+    border-bottom:1px;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
+}
+
+.flex-item{
+    height:53px;
+    width:729px;
+    vertical-align:middle; 
 }
 
 .review-div{
@@ -1341,6 +1371,16 @@ input:checked + .slider:before {
 
 .important-div{
     background-color: white;
+    text-align:left;   
+    width:744px;
+    float:right;
+    padding:10px;
+   margin-right: 10px;
+    margin-bottom:10px;
+}
+
+.important-div-grey{
+    background-color: #ededed;
     text-align:left;   
     width:744px;
     float:right;
