@@ -1042,11 +1042,26 @@ Results Section style
 .box{
 	border-radius: 0.18em;
 }
-
-.results{
-
+/*rfa 05-04*/
+.prl-0{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
-
+.pr-0{
+    padding-right: 0;
+}
+.mt-0 {
+  margin-top: 0 !important;
+}
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+.text-green{
+    color: green;
+}
+.bg-light-green{
+    background-color: lightgreen;
+}
 .sortbar {
   overflow: hidden;
   color: #616161;
@@ -1128,7 +1143,6 @@ Results Section style
 /*
 Reservation Section style
 ==================*/
-
 .reserve{
     background: url(../images/home-bg1.jpg) no-repeat scroll  center center;
     background-size: cover;
