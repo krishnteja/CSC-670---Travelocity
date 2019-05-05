@@ -117,10 +117,10 @@ section { overflow: hidden; }
 .bg-primary{background-color: #00a885;}
 .bg-finence{background-color:#13A0B2;}
 .bg-mega{background-color:#1b1b1b;}
-.bg-grey{background-color: #ededed;} /*rfa 05-01*/
+.bg-grey{background-color: #ededed;} 
 .bg-black{background-color: #222222;}
 .bg-white{background-color: #fff;}
-.bg-blue{background-color:#004074;} /*rfa 05-01*/
+.bg-blue{background-color:#004074;} 
 
 img {
     -moz-user-select: none;
@@ -297,7 +297,7 @@ p:last-child {
 }
 
 .disclaimer{
-	color: red; /*rfa 05-02*/
+	color: red; 
 }
 
 /*
@@ -692,7 +692,7 @@ textarea::-ms-input-placeholder{
 
 /*Preloader*/
 #loading{
-    background-color: #004074; /*rfa 05-01*/
+    background-color: #004074; 
     height: 100%;
     width: 100%;
     position: absolute;
@@ -865,12 +865,12 @@ Nav Menu style
     background-color: #3765a3;
     color:#fff;
 }
-/*rfa 05-01*/
+
 .navbar-top{
 	border-top: .3em solid transparent;
 	border-color:#004e93 transparent #c7c7c7;
 }
-/*rfa 05-01*/
+
 .selected-tab a{
 	background: #004074;
 	border-color:transparent;
@@ -1036,13 +1036,12 @@ input[type="date"]::-webkit-inner-spin-button{
     color: white;
 }
 
-/*rfa 05-02
+/*
 Results Section style
 ==================*/
 .box{
 	border-radius: 0.18em;
 }
-/*rfa 05-04*/
 .prl-0{
     padding-right: 0 !important;
     padding-left: 0 !important;
@@ -1138,7 +1137,29 @@ Results Section style
 	width: 25%;
 	text-align: right;
 }
-
+#filter-btn-close{
+    display:none;
+}
+@media screen and (max-width: 768px) {
+    #sponsorAd {
+        display: none;
+    }
+    #filter-btn{
+        display: block;    
+    }
+    .flex-area-primary,.flex-area-secondary{
+        width: 100%;
+        position: relative;
+        align-content: center!important;
+        text-align: center;
+        min-height: 1px;
+        padding-right: 15px !important;
+        padding-left: 15px!important;
+    }
+    #filter-btn-close{
+        display: block;
+    }
+}
 
 /*
 Reservation Section style
@@ -1603,7 +1624,6 @@ work Section style
     right:-1.4%;
     box-shadow: 1px 0px 0px 0px;
 }
-/*rfa 05-01*/
 .carousel-inner h5{
 	font-weight: bold;
 }
