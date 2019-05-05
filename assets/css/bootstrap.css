@@ -3987,7 +3987,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 10px 5px; /*rfa 05-01*/
+  padding: 10px 5px; 
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4040,7 +4040,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555;
   cursor: default;
-  /*background-color: #fff; rfa 05-01*/
+  /*background-color: #fff; */
   border: 1px solid #ddd;
   border-bottom-color: transparent;
 }
@@ -4240,7 +4240,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
   .container-fluid > .navbar-collapse {
-    /*margin-right: 0;rfa 05-01*/
+    /*margin-right: 0;*/
     margin-left: 0; 
 	width: 100%;
 	
@@ -4371,7 +4371,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-top: 5px;
     padding-bottom: 5px;
 	line-height: 20px;
-	border-color: #fff; /*rfa 05-01*/
+	border-color: #fff; 
   }
 }
 .navbar-form {
@@ -4493,12 +4493,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-left {
     float: left !important;
-	width: 100%; /*rfa 05-01*/
+	width: 100%; 
 	
   }
-  /*rfa 05-01*/
+  
   .flex {
-	width: 100%; /*rfa 05-01*/
+	width: 100%; 
 	display: -webkit-flex; /* Safari */
 	-webkit-justify-content: space-between; /* Safari 6.1+ */
 	display: flex;
