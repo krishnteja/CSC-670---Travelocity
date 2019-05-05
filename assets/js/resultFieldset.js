@@ -1,7 +1,6 @@
 function searchResults(){
 var options = {
 	searchValueNames: [ 'carType','price','company','pickupLoc','specifications' ]
-	//item: '<li><h3 class="name"></h3><p class=""></p></li>'
 };
 
 var searchValues = [
@@ -38,7 +37,6 @@ var searchValues = [
 
 /* Get Vendor Logo */
 var vendors = ['Alamo','Advantage'];
-//var vendorLogo = getVendorLogo("Alamo");
 
 function getVendorLogo(ven){
 	for(var i=0; i<= vendors.length; i++){
@@ -63,7 +61,6 @@ function getVendorLogo(ven){
 
 /* Get Vehicle Image */
 var vehicles = ['Economy','Compact'];
-//var vehicleImg = getVehiclImg("Economy");
 
 function getVehicleImg(vic){
 	for(var i=0; i<= vehicles.length; i++){
@@ -233,3 +230,13 @@ function dataFilterSet(){
     document.getElementById("filter-carClass-other-label").innerHTML = filterValues[13].carType + " (" + filterValues[13].qty + ")";
     document.getElementById("price-carClass-other-label").innerHTML = "$" + filterValues[13].price;
 } //end dataFilterSet()
+
+function closeFilterMenu(){
+    document.getElementById("filter-panel").classList.add("hide");
+    document.getElementById("filter-btn-open").classList.remove("hide");
+}
+
+function openFilterMenu(){
+    document.getElementById("filter-btn-open").classList.add("hide");
+    document.getElementById("filter-panel").classList.remove("hide");
+}
