@@ -131,11 +131,15 @@
 		<span class="h3">197 Cars at Portland, OR airport from $16</span>
 		<p class="disclaimer"><i class="fa fa-warning"></i> We're experiencing high demand at this location. Book soon.</p>
 		<p>Total includes taxes and fees.</p>
+                        <button id="filter-btn-open" class="btn-close btn-primary filter-panel-close hide" type="button" onclick="openFilterMenu()">
+											<span class="icon icon-close" aria-hidden="true"></span>
+											<span class="alt">Open Filters</span>
+										</button>
                         <div class="roomy-10">
                             <div class="col-md-3">
                                 <aside id="filter-panel" class="sm-m-top-30">
                                     <div class="filter-panel-close-wrapper">
-										<button class="btn-close btn-primary filter-panel-close hide" type="button" onclick="">
+										<button id="filter-btn-close" class="btn-close btn-primary filter-panel-close " type="button" onclick="closeFilterMenu()">
 											<span class="icon icon-close" aria-hidden="true"></span>
 											<span class="alt">Close Filters</span>
 										</button>
@@ -464,7 +468,7 @@
 </div> 
                             
 <!-- Sponsor Ads -->                            
-<div class="col-md-2 pr-0">
+<div id="sponsorAd" class="col-md-2 pr-0">
     <div class="sopnsor-ads box sm-m-top-30">
         <div class="bg-blue">
             <span class="">Sponsored Listings</span>
