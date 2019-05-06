@@ -405,7 +405,7 @@ Button
 
 
 /*
-socail icon
+social icon
 --------------------------------*/
 /*
 Extra height css
@@ -1036,6 +1036,27 @@ input[type="date"]::-webkit-inner-spin-button{
     color: white;
 }
 
+
+@media screen and (max-width: 768px) {
+    .search-box{  
+    width: 100%;  
+    }
+    
+    .roomy-50 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+    
+    .sm-m-top-30 {
+    margin-top: 5px;
+    }
+    
+
+    .col-md-4{
+        width:33.33%;
+    }
+}
+
 /*
 Results Section style
 ==================*/
@@ -1160,6 +1181,8 @@ Results Section style
         display: block;
     }
 }
+
+
 
 /*
 Reservation Section style
@@ -1293,20 +1316,20 @@ input:checked + .slider:before {
     background-color: white;
     text-align:center;
     height:160px;
-    width:376px;
+    width:33%;
     float:left;
 }
 
 .car-center{
   float:left;
     height:225px;
-    width:385px;;
+    width:60%;
 }
 
 .car-right{
      text-align:right;
     height:225px;
-    width:300px;
+    width:40%;
     float:right;
 }
 
@@ -1319,7 +1342,7 @@ input:checked + .slider:before {
     padding-left:10px;
     float:right;
     height:225px;
-    width:764px;
+    width:67%;
 }
 
 .h3-size{
@@ -1390,14 +1413,14 @@ input:checked + .slider:before {
 
 .flex-item{
     height:53px;
-    width:729px;
+    width:100%;
     vertical-align:middle; 
 }
 
 .review-div{
     background-color: white;
     text-align:left;   
-    width:376px;
+    width:33%;
     float:left;
     padding:10px;
      margin-right: 10px;
@@ -1407,7 +1430,7 @@ input:checked + .slider:before {
 .important-div{
     background-color: white;
     text-align:left;   
-    width:744px;
+    width:62%;
     float:right;
     padding:10px;
    margin-right: 10px;
@@ -1417,7 +1440,7 @@ input:checked + .slider:before {
 .important-div-grey{
     background-color: #ededed;
     text-align:left;   
-    width:744px;
+    width:62%;
     float:right;
     padding:10px;
    margin-right: 10px;
@@ -1430,8 +1453,8 @@ input:checked + .slider:before {
 }
 
 .img-icons{
-   position: relative;
-    width: 30px;
+    position: relative;
+    width: 47%;
     height: 30px;
     top: 14px;
     left: 15px;
@@ -1439,30 +1462,59 @@ input:checked + .slider:before {
 
 .risk-free-icon{
    position: relative;
-    width: 60px;
+    width: 18%;
     height: 60px;
     float:left;
    
 }
 
 .great-deal-icon{
-        background: #d2e6c8;
-    width: 60px;
-    height: 60px;
+    background: #d2e6c8;
+    width: 18%;
+    height:60px;
     border-radius: 50%;
     float:left;
 }
 
 .great-deal-content{
-    width: 276px;
+    width: 80%;
+     height:100%;
+   float: right;
+   
+}
+
+.risk-free-content{
+    width: 80%;
    float: right;
     height:60px;
 }
 
-.risk-free-content{
-    width: 276px;
-   float: right;
-    height:60px;
+@media screen and (max-width: 768px) {
+    
+    .great-deal-icon{ 
+        height:45px;
+    }
+   
+    .img-icons{
+        height:20px;
+        top: 10px;
+        left: 10px;
+    } 
+    
+    .great-deal-content p{
+        line-height: 150%;
+    }
+    
+    .risk-free-content p{
+         line-height: 150%;
+    }
+    
+    .review-div p{
+        line-height:150%
+    }
+    .important-div p{
+        line-height:150%
+    }
 }
 /*
 Featured section style
