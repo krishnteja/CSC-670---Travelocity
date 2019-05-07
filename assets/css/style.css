@@ -971,8 +971,8 @@ Home Section style
     margin-top: 20px;
     margin-bottom: 10px;
     height: 90%;
-    width: 50%;
-   
+    width: 55%;
+    
 }
 
 .search-box-title{
@@ -991,22 +991,30 @@ Home Section style
 
 .search-location{
     margin: 1px;
-    width:300px;
+    width:95%;
     height:35px;
     padding:0.5px;
     border-radius: 3px;
 }
 
 .search-dates{
-     width:190px;
+     width:95%;
     height:35px;
      border-radius: 3px;
 }
 
 .search-times{
-     width:110px;
+     width:95%;
     height:35px;
      border-radius: 3px;
+}
+
+.times-td{
+    width:15%;
+}
+
+.dates-td{
+    width:20%;
 }
 
 
@@ -1037,6 +1045,10 @@ input[type="date"]::-webkit-inner-spin-button{
 }
 
 
+.no-border{
+    border:0px;
+}
+
 @media screen and (max-width: 768px) {
     .search-box{  
     width: 100%;  
@@ -1045,6 +1057,7 @@ input[type="date"]::-webkit-inner-spin-button{
     .roomy-50 {
     padding-top: 10px;
     padding-bottom: 10px;
+        overflow: auto;
     }
     
     .sm-m-top-30 {
@@ -1053,10 +1066,46 @@ input[type="date"]::-webkit-inner-spin-button{
     
 
     .col-md-4{
-        width:33.33%;
+        width:100%;
+    }
+    
+  
+}
+
+
+@media screen and (max-width: 991px) {
+    .search-box{  
+     min-width: 530px;  
+    }
+    
+     .col-md-4{
+        width:100%;
+         float:left;
+         height:20%;
+    }
+
+     .roomy-50 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+        overflow: auto;
     }
 }
 
+@media (max-width: 479px) {
+
+. .table-responsive{
+        overflow: auto;
+    }
+    
+ .times-td{
+    width:10%;
+}
+
+.dates-td{
+    width:15%;
+}
+
+}
 /*
 Results Section style
 ==================*/
@@ -1161,6 +1210,7 @@ Results Section style
 #filter-btn-close{
     display:none;
 }
+
 @media screen and (max-width: 768px) {
     #sponsorAd {
         display: none;
@@ -1331,6 +1381,7 @@ input:checked + .slider:before {
     height:225px;
     width:40%;
     float:right;
+    
 }
 
 .heart-img{
@@ -1355,7 +1406,7 @@ input:checked + .slider:before {
 
 .h3-size-grey{
     font-size:24px;
-   margin:0,0,0;
+   margin:0px;
     color:grey;
 }
 
@@ -1445,6 +1496,7 @@ input:checked + .slider:before {
     padding:10px;
    margin-right: 10px;
     margin-bottom:10px;
+    overflow: auto;
 }
 
 .popup-icon{
@@ -1486,7 +1538,8 @@ input:checked + .slider:before {
 .risk-free-content{
     width: 80%;
    float: right;
-    height:60px;
+    height:80px;
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -1505,8 +1558,14 @@ input:checked + .slider:before {
         line-height: 150%;
     }
     
+    .risk-free-content{
+         
+        overflow: auto;
+    }
+    
     .risk-free-content p{
          line-height: 150%;
+        
     }
     
     .review-div p{
@@ -1514,6 +1573,72 @@ input:checked + .slider:before {
     }
     .important-div p{
         line-height:150%
+    }
+    
+    .h5-size-black no-spaces{
+       font-size: 90%;
+    line-height: 1rem;
+    }
+    
+    .car-prop-font{
+        font-size:14px;
+        margin:0px;
+        padding:0px;
+   
+    }
+    
+   .h5-size-black
+    {
+       display:none; 
+    }
+}
+
+
+@media (max-width:991px){
+      .risk-free-content{
+         
+        overflow: auto;
+    }
+    
+      .risk-free-content p{
+         line-height: 150%;
+        
+    }
+}
+
+@media (max-width: 479px) {
+
+.h5-size-black no-spaces{
+        line-height:100%;
+    }
+    
+    .h5-size-black no-spaces
+    {
+       display:none; 
+    }
+
+    .review-div{
+        float:left;
+        width:100%;
+    }
+    
+    .important-div{
+        float:left;
+        width:100%;
+    }
+    
+    .car-properties-info{
+        float:left;
+        width:100%;
+    }
+    
+    .car-logo-left{
+        float:left;
+        width:100%;
+    }
+    
+     .risk-free-content{        
+        overflow: auto;
     }
 }
 /*
